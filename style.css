@@ -1,0 +1,236 @@
+@import url(//necolas.github.io/normalize.css/);
+@import url(//meyerweb.com/eric/tools/css/reset/reset.css);
+@import url(/css/style/grid.css);
+@import url(/css/style/font-awesome.min.css);
+
+* { margin:0; padding:0; }
+html {
+    padding: 5%;
+}
+ul{
+    margin-bottom:1.5em;
+    margin-left:1.5em;
+}
+a{
+    text-decoration:none;
+}
+
+.nav{
+    list-style:none;
+    margin-left:0;
+}
+    .nav > li,
+        .nav > li > a{
+            display:inline-block;
+            *display:inline;
+            zoom:1;
+        }
+
+.stacked > li{
+        display:list-item;
+    }
+        .stacked > li > a{
+            display:block;
+    }
+
+.flyout,
+.flyout-alt{
+    position:relative;
+}
+    .flyout-content{
+        position:absolute;
+        top:100%;
+        left:-99999px;
+        height:0;
+        overflow:hidden;
+    }
+    
+    .flyout:hover > .flyout-content{
+        left:0;
+    }
+    .flyout-alt:hover > .flyout-content{
+        top:0;
+        left:100%;
+    }
+    .flyout:hover > .flyout-content,
+    .flyout-alt:hover > .flyout-content{
+        height:auto;
+        overflow:visible;
+    }
+
+.site-nav{
+    font-size:0.75em;
+    font-family:sans-serif;
+}
+        .site-nav a{
+            line-height:1;
+            padding:1em;
+            background-color:darkslategrey;
+            color:#fff;
+            white-space:nowrap;
+        }
+
+.site-nav .flyout:hover > a,
+.site-nav .flyout-alt:hover > a,
+.site-nav a:hover{
+    color: papayawhip;
+    background-color:cornflowerblue;
+}
+
+.site-nav .flyout-alt > a:after{
+    content:" »";
+}
+
+.site-nav a, .site-nav .flyout-content{
+    border:0  solid darkslategrey;
+    display: block;
+}
+.site-nav > li > a{
+    border-left-width:0; 
+}
+
+.site-nav > li:first-child > a{
+    border:none;    
+}
+.site-nav .flyout-content{
+    border-width:0 0 0 0; 
+}
+.site-nav .flyout-content a{
+    border-bottom-width:0; 
+}
+.site-nav .flyout-alt:hover > .flyout-content{
+    top:-1px;
+}
+
+/*WND*/
+.wnd-modal {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: block;
+}   
+
+.wnd-modal .wnd {
+    background: white;
+    width:  60%;
+    height: 40%;
+    margin: 10% auto;
+    position: relative;
+
+}
+
+.wnd-modal .wnd-header{
+    padding:  0 1em;
+}
+
+.wnd-modal .wnd-body {
+overflow: auto; /*can be scrolled*/
+padding: 1em;
+}
+
+.wnd-modal .close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+/*HIDE*/
+.content {
+  padding: 0px;
+}
+
+.close:focus ~ .wnd-body {
+  display: none;
+}
+
+.content {
+ padding: 5px;
+}
+
+/*SEARCH*/
+.search {
+    position: relative;
+    border: 0.1rem solid grey;
+    height: 3rem;
+
+}
+
+.search input{
+    height: 100%;
+    width: 100%;
+    padding-right: 3rem;
+    padding-left: 1rem;
+    border: none;
+
+}
+
+.search button {
+    position: absolute; 
+    right: 0;
+    top: 0; 
+    border: none;
+    height: 100%;
+    width: 3rem;
+    padding-left: 1rem;
+}
+
+/*SLIDER*/
+.slider {
+    position: relative;
+    height: 30rem;
+}
+
+.slider li {
+   height: 100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-origin: padding-box;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: none;
+   width: 100%;
+}
+
+.slider li.active {
+    display: block;
+
+}
+.slider .slide-1{
+    background-image: url(http://lorempixel.com/400/200/);
+}
+
+.slider .slide-2{
+    background-image: url(http://lorempixel.com/400/200/);
+    position: absolute;
+}
+
+.slider .slide-3{
+    background-image: url(http://lorempixel.com/400/200/);
+}
+
+.slider .arrow-prev, 
+.slider .arrow-next {
+    position: absolute;
+    font-size: 3.2rem;
+    color: gray;
+    top: 50%;
+    /*line-height: 30rem;*/
+    height: 8rem;
+    margin-top: -3.2rem;
+}
+
+.slider .arrow-prev {
+    right: 1rem;
+}
+
+
+.slider .arrow-next {
+    left:  1rem;
+}
+
+
+
+
+
